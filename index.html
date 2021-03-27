@@ -4,35 +4,50 @@
 <head>
     <title>myPortfolio</title>
     <link rel="stylesheet" href="./static/css/portFolio.css">
+    <script src="static/js/scrollnav.js"></script>
 </head>
-<header>
-<ul>
-    <li><a class="active" id="#home-page">Home</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</header>
+<nav id="navbar">
+    <ul>
+        <li><a class="active" href="#home-page">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 <body>
+
     <section id="home-page">
-        Hello World!
-    </section>
-    <section id="portfolio">
-        portFolio
+        <div class="home-page-content">
+            <span id="border">HELLO EVERYONE!</span>
+            <br>
+            <br>
+            <span id="name">I am Batzul, student of MIT.</span>
+        </div>
     </section>
     <section id="about">
-        about
+        About
+    </section>
+    <section id="projects">
+        Projects
     </section>
     <section id="skills">
         Skills
     </section>
-    <section id="projects">
-        projects
-    </section>
     <section id="contact">
-        contact
+        Contact
     </section>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-50px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+        </script>
 </body>
 </html>
