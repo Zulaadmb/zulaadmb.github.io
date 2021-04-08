@@ -62,3 +62,6 @@ h1 {
   transform: rotateY(180deg);
   padding: 5px;
 }
+.social {
+  text-align: center;
+}
